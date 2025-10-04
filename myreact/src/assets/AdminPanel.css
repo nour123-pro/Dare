@@ -1,0 +1,355 @@
+
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css');
+
+
+.container2{
+  width: 100vw;
+  height: 100%;
+  min-height: 100vw;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+
+    
+  background-image: 
+  linear-gradient(to right, rgba(204, 204, 204, 0.095) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(204, 204, 204, 0.088) 1px, transparent 1px);
+background-size: 50px 50px; /* Size of each square */
+  
+}
+
+.leftside{
+  
+  width: 15%;
+  height: 100%;
+   border-right:  1px solid rgba(128, 128, 128,0.3);
+   padding: 2rem;
+   
+
+}
+.rightside{
+  width: 85%;
+  padding: 2rem;
+}
+.nav2{
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+ 
+  
+
+}
+
+
+.nav2 ul {
+  list-style: none;
+  
+  li {
+    position: relative;
+    margin: 3.2em 0;
+    font-size:  12px !important;
+    
+    a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: rgba(#FFF, 0.35);
+      display: block;
+      transition: all ease-out 300ms;
+    }
+    
+    &.active a {
+      color: white;
+    }
+    
+    &:not(.active)::after {
+      opacity: 0.2;
+    }
+    
+    &:not(.active):hover a {
+      color: rgba(#FFF, 0.75);
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.2em;
+      background: black;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, #5e42a6, #b74e91)
+    }
+  }
+}
+.nav2 ul li:hover{
+  color: wheat;
+
+ 
+
+}
+.nav2 ul li:hover a::after{
+  
+    color: whitesmoke;
+    opacity: 1;
+  
+}
+.table{
+ 
+ background-color: rgb(255, 255, 255);
+
+ font-size: 13px;
+ border-radius: 15px;
+ padding: 10px;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+ 
+}
+
+
+.table th {
+   font-size: 15px;
+  color: rgba(0, 0, 0, 0.204);
+}
+.price-wrapper2{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: black;
+}
+.table tbody tr{
+  border-bottom: 1px solid rgba(128, 128, 128,0.12) !important;
+  
+   
+ 
+}
+.table tbody  td{
+ align-self: center;
+ justify-self: center;
+  
+  border-radius: 15px;
+  text-align: center;
+   height: 100%;
+   width: fit-content;
+   justify-content: center;
+   align-items: center;
+ 
+ 
+ 
+  
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  
+  align-self: center;
+  justify-self: center;
+
+}
+.icon{
+  display: inline-block;
+  cursor: pointer;
+  font-size: 23px;
+  width: 30px !important;
+ height: auto;
+  
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(94, 66, 166, 0.1);
+  padding: 10px;
+}
+
+.icons span{
+  display: inline-block; 
+ 
+  width: 50%;
+  
+  margin-left: 12px;
+  cursor: pointer;
+  padding: 12px;
+  
+}
+.icons span:nth-child(2){
+  color: red;
+}
+.icons span:hover {
+  color: #5e42a6;
+  background-color: rgba(94, 66, 166, 0.1);
+ 
+  
+  border-radius: 15px;
+  transition: all 0.3s ease; /* Optional for smooth effect */
+}
+
+.icon :hover{
+  color: #6e628d;
+ 
+ 
+  
+
+  
+
+}
+.catname span{
+  border-radius: 15px;
+  padding: 12px;
+}
+
+.image3{
+  width: 30%;
+  border-radius: 12px;
+  height: 40px !important;
+
+}
+.image3 img{
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+}
+.image3 {
+ 
+  
+  overflow: hidden; /* Ensures the expanded image doesn't overflow */
+}
+
+.image3 img:hover {
+  position: absolute;
+  width: 700px;
+  top: 50%;
+  left: 20%;
+  
+  z-index: 10; /* Ensures it appears above other elements */
+  transition: transform 13s ease-in-out;
+  border-radius: 12px; /* Keeps the border radius consistent */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better visibility */
+}
+
+
+
+.graybackground{
+  opacity: 0.3;
+ 
+}
+.content{
+ 
+  width: 100%;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+.flex-colomn{
+  display: flex;
+  flex-direction: column;
+}
+.table {
+  background-color: rgb(255, 255, 255);
+  font-size: 15px; /* Reduced font size for smaller appearance */
+  border-radius: 10px; /* Slightly smaller border radius */
+  padding: 5px; /* Reduced padding */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: auto; /* Adjust width to fit content */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  height: fit-content;
+  margin: 12px;
+}
+
+
+
+
+.table tbody tr{
+  border-bottom: 1px solid rgba(128, 128, 128,0.12) !important;
+  
+   
+ 
+}
+.table tbody  td{
+ align-self: center;
+ justify-self: center;
+  
+  border-radius: 15px;
+  text-align: center;
+   height: 100%;
+   width: fit-content;
+   justify-content: center;
+   align-items: center;
+ 
+ 
+ 
+  
+}
+.card{
+  width: 200px;
+  height: auto;
+  min-height: 100px;
+  background-color:#0d071f;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(11, 1, 1);
+  border: 1px dashed rgba(255, 255, 255, 0.216);
+  cursor: pointer;
+ 
+  
+}
+.card:hover{
+  background-color: #FFF;
+  color: #5e42a6;
+  transform: scale(1.2);
+
+}
+.card i{
+  position: relative;
+  font-size:20px !important ;
+  background-color: inherit !important;
+}
+
+.font2{
+  font-family: 'SugarBrown',sans-serif;
+  letter-spacing: 2px;
+  font-size: 10px;
+  margin: 7px;
+}
+.font1{
+  font-size: 29px;
+  color:rgba(116, 108, 108, 0.461);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+.card:nth-child(3n + 1) {
+  background-color: #f7f3ff; /* Light Lavender */
+}
+
+/* 2. Second card in the sequence (and every 3rd card after) */
+.card:nth-child(3n + 2) {
+  background-color: #e6f7ff; /* Light Sky Blue */
+}
+
+/* 3. Third card in the sequence (and every 3rd card after) */
+.card:nth-child(3n) {
+  background-color: #fffde6; /* Light Yellow/Cream */
+}
+
+/* Optional: Different style for the very first card if needed */
+.card:first-child {
+  border-left: 5px solid #6c757d; /* A border accent for the first item */
+}
+.block-box {
+  pointer-events: none;
+  opacity: 0.6;
+}

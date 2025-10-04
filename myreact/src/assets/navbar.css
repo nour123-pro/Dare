@@ -1,0 +1,364 @@
+:root {
+    --green1: #D6EFD8;
+    --green2: #80AF81;
+    --green3: #508D4E;
+    --green4: #1A5319;
+}
+
+@font-face {
+    font-family: 'SugarBrown';
+    src: url("../assets/fonts/Brown-Sugar/BrownSugar.ttf") format('truetype');
+}
+
+.bodoni-moda {
+    font-family: "Bodoni Moda", serif;
+    font-optical-sizing: auto;
+    font-weight:23px;
+    font-style: normal;
+}
+
+.navbar {
+    width: 100%;
+    height: 10%; /* Better to use vh for responsive height */
+    display: flex;
+    align-items: center;
+    /* center vertically */
+    position: fixed; /* Use fixed for sticky navbars */
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+    text-align: center;
+    
+}
+
+.navelements,.brandlogo,.navusericons,.usericon,.cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px;
+    border-radius: 15px;
+}
+
+.navelements{
+    border-top-left-radius:34px ;
+    border-top-right-radius:34px ;
+    color: black;
+    gap: 3vw;
+    font-family: "Bodoni Moda", serif;
+    font-size: 12px;
+    font-size: 1vw;
+}
+
+.navelements p {
+    border-bottom: 1px solid transparent; /* Reserve space for border */
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    margin: 12px;
+    color: gray;
+    color:  rgba(2, 27, 82,0.5);
+}
+
+.navusericons{
+    gap: 1vw;
+}
+
+.navelements p:hover {
+    cursor: pointer;
+    border-bottom: 1px solid   #AB7141;; /* Visible on hover */
+}
+
+.navelements i{
+   color: #AB7141;
+}
+
+.navelements p:hover{
+    cursor: pointer;
+    border-bottom: 1px solid  #AB7141;;
+    width: fit-content;
+    height: fit-content;
+}
+
+.brandlogo{
+    font-size: 15px;
+    font-style: oblique;
+    width: fit-content !important;
+    height: fit-content;
+    font-family: inherit;
+    margin-left: 3vw;
+}
+
+.brandlogo p{
+    color:  rgb(2, 27, 82);
+    font-size: clamp(1rem,1rem,23px);
+    font-family:'SugarBrown',sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.brandlogo img{
+    width: 40px;
+    height: auto;
+}
+
+.icondiv1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+}
+
+.selected{
+    color:black;
+    font-weight: bolder;
+}
+
+.usericon:hover{
+    transform: scale(1.1);
+}
+
+.cart,.icondiv {
+    border-radius: 50%;
+    width: 2vw;
+    height: 2vw; /* Ensure height matches width for a perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content inside the circle */
+    font-size: 1.4vw;
+    cursor: pointer;
+}
+
+.cart1{
+    background-color: #130b05;
+    color: whitesmoke !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4vw 0.2vw;
+  
+   
+}
+
+.cart1 i {
+    display: flex;         /* Make icon a flex container */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;     /* Adjust size as needed */
+    height: 100%;
+}
+
+.icondiv1 {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-toggle {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Push label left and icon right */
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-toggle i{
+    margin: 16%;
+}
+
+.dropdown-toggle i {
+    position: relative;
+    justify-self: flex-end;
+    color: rgb(19, 13, 13);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ccc;
+    min-width: 150px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.usericon {
+    display: inline-flex;       /* Changed to inline-flex for better behavior */
+    justify-content: center;
+    align-items: center;
+    width: 40px;               /* Required for proper sizing */
+    height: 40px;              /* Required for proper sizing */
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: black;
+    cursor: pointer;
+    border-color: transparent !important;
+    
+}
+
+.usericon:nth-child(4){
+   /** background-color: #AB7141;**/
+}
+
+.usericon i {
+    display: flex;             /* Make the <i> element a flex container */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.closebutton{
+    display: none;
+}
+
+.dropdown-toggle-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .navbar {
+        height: 15vh; /* Adjust navbar height for small screens */
+       
+    }
+
+    .navelements {
+        font-size: 3vw; /* Increase font size for smaller screens */
+        gap: 5vw; /* Adjust gap between navigation elements */
+    }
+
+    .brandlogo p {
+        font-size: 0.5vw; /* Adjust brand logo font size */
+    }
+
+    .cart, .icondiv {
+        width: 8vw;
+        height: 8vw;
+        font-size: 4vw;
+    }
+
+    .usericon  {
+        width: 30px;
+        height: 30px;
+        font-size: 2vw;
+    }
+
+    .dropdown-menu {
+        min-width: 120px; /* Adjust dropdown width for mobile */
+    }
+
+    .dropdown-item {
+        font-size: 10px; /* Make font size smaller on mobile */
+    }
+    .icondiv1{
+        font-size: 2.6vw;
+    }
+}
+
+/* Tablet devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        height: 12vh; /* Adjust navbar height for tablets */
+        
+    }
+
+    .navelements {
+        font-size:20px !important;
+        gap: 4vw;
+    }
+
+    .brandlogo p {
+        font-size: 3vw;
+    }
+
+    .cart, .icondiv {
+        width: 2vw;
+        height: 3vw;
+        font-size: 5vw;
+    }
+    
+    .usericon  {
+        width: 30px;
+        height: 30px;
+        font-size: 2vw;
+    }
+    
+
+    .dropdown-menu {
+        min-width: 140px;
+    }
+
+    .dropdown-item {
+        font-size: 11px;
+    }
+    .icondiv1{
+        font-size: 2.6vw;
+    }
+    .cart1 i{
+        font-size: 3vw;
+    }
+}
+
+/* Desktop devices (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .navbar {
+        height: 10vh; /* Keep navbar height consistent on desktops */
+       
+    }
+
+    .navelements {
+        font-size: 4.5vw;
+        gap: 3vw;
+    }
+
+    .brandlogo p {
+        font-size: 2rem; /* Larger font size for brand logo */
+    }
+
+    .cart, .icondiv {
+        width: 3vw;
+        height: 3vw;
+        font-size: 1.5vw;
+    }
+
+    .usericon  {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .dropdown-menu {
+        min-width: 150px; /* Default dropdown width */
+    }
+
+    .dropdown-item {
+        font-size: 12px; /* Default font size */
+    }
+}

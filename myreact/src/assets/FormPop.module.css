@@ -1,0 +1,136 @@
+/* FormPop.module.css */
+
+.modalContent {
+  border-radius: 16px;
+ 
+  padding: 11px;
+  padding-bottom:0 !important;
+ border: 1px solid powderblue;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  
+}
+
+
+.modalHeader {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+  text-align: center;
+  color: gray;
+  font-family: 'Classy',sans-serif;
+}
+
+/* Form item wrapper */
+.formItem {
+  margin-bottom: 20px;
+}
+.formItem :global(.ant-form-item-label > label){
+  color: rgb(193, 190, 184);
+  font-family: 'Classy',sans-serif;
+}
+
+/* Universal input styles */
+.formItem input,
+.formItem textarea,
+.formItem select
+.formItem .ant-input,
+.formItem .ant-input-number,
+.formItem .ant-select-selector {
+  all: unset; /* Reset all browser and AntD styles */
+  display: block;
+  width: 70%;
+  border: 1px solid transparent;
+  padding: 10px 14px;
+  font-size: 15px;
+ 
+  color: #111;
+  transition: background 0.3s, box-shadow 0.3s;
+  border: none;
+  border-bottom:1px solid rgb(195, 195, 195) ;
+  text-align: start;
+}
+
+/* Focus styles */
+.formItem input:focus,
+.formItem textarea:focus,
+.formItem .ant-input-focused,
+.formItem .ant-input-number-focused,
+.formItem .ant-select-focused,
+.formItem .ant-select-selector:focus {
+  
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+}
+
+/* Optional hover effect */
+.formItem input:hover,
+.formItem textarea:hover,
+.formItem .ant-select-selector:hover {
+ border-color: #0958d9;
+}
+
+/* Remove borders, outline and box-shadow from modal buttons */
+.ant-modal-content {
+  border-radius: 16px !important;
+  padding: 24px !important;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.ant-modal-footer .ant-btn {
+ display: none;
+}
+
+
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+
+ 
+.buttonContent {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  font-size: 16px;
+}
+
+.saveButton,
+.cancelButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: none;
+}
+
+.saveButton {
+ background-color: transparent;
+  border: 1px solid pink;
+
+  color:black;
+}
+
+.saveButton:hover {
+  color: rebeccapurple;
+  border-color: black;
+}
+
+.cancelButton {
+  background-color: transparent;
+  color: #666;
+  
+}
+
+.cancelButton:hover {
+ border:1px solid pink ;
+}
+
+

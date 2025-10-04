@@ -1,0 +1,64 @@
+.herodiv{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+.leftside{
+    width: 50%;
+    height: 100%;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rightside{
+    width: 50%;
+    height: 100%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.leftside .herotext  img{
+    align-self: center;
+    justify-self: center;
+    width: 100px;
+    transform: rotate(12deg);
+}
+
+.leftside .herotext{
+    font-size: 3.4rem;
+    font-family: 'SugarBrown',sans-serif !important;
+    word-spacing: 0.3rem;
+    font-weight: 900;
+}
+.grouped{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.herobutton{
+    width: 100px;
+    height: auto;
+    padding: 12px;
+    
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid black;
+     font-family: "Bodoni Moda", serif;;
+}
+.div1{
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    background-color: yellow;
+}

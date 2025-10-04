@@ -1,0 +1,300 @@
+
+.Menu{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.Menu::before{
+    content: 'skin';
+    background-image: url('src/assets/images/flower1-removebg-preview.png');
+    background-position: top center; /* Adjust the position of the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    
+    background-size: 13vw; /* Ensure image covers the whole pseudo-element */
+    position: absolute; /* Position it absolutely within the parent container */
+    
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+  
+    font-size: 40vw;
+  /*  margin-left: 12vw;*/
+     color: rgba(171, 113, 65,0.5); ; /* Color with opacity */
+    pointer-events: none; /* Make sure clicks pass through */
+     opacity: 0.1;
+    z-index: 0;
+    white-space: nowrap;
+    font-weight: 300;
+    font-family: 'SugarBrown', sans-serif;
+    
+    display: flex; /* Enable flex to align content */
+    justify-content: center;
+    align-items: center;
+    writing-mode: sideways-lr;
+}
+.Product{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    font-size: 2vw;
+   
+    padding: 4vw;
+    font-family: 'Habora';
+}
+.productImage{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    position: relative;
+   
+}
+.productImage i{
+    position:absolute;
+    
+     top: 80%;   /* distance from bottom */
+  left: 29%;     /* distance from left */
+  font-size: 2vw;
+ color: rgb(123, 20, 20) ; /* Color with opacity */
+  cursor: pointer;
+}
+.Product  .productImage img{
+    width: 50%;
+    height: 40%;
+    justify-content: center;
+  
+}
+.ProductMenu{
+    width: 100%;
+    height: auto;
+   
+    display: flex;
+    flex-direction: row;
+   
+    
+}
+.ProductMenuText{
+    width: 100%;
+    height: 10%;
+    font-family: 'Monkey',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    color: black;
+    letter-spacing: 1vw;
+}
+.productname{
+    
+    color: #7b1414 ; /* Color with opacity */
+   
+    font-size: 1.4vw;
+    white-space: nowrap;
+}
+.productcategory{
+    width: 20%;
+    border-radius: 15px;
+    height: fit-content;
+   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 1vw;
+    padding-right:1vw ;
+    color: white;
+    font-size: 0.7vw;
+}
+.productcategory:hover{
+   transform: scale(1.2) ;
+   transition: 1.2s ease-in-out;
+}
+.Stars{
+    cursor: pointer;
+}
+
+.productDescription{
+    font-size: 15px;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensure compatibility for breaking words */
+    line-break: anywhere; /* Allow breaking at any point */
+    
+    width: 50%;
+    height: 40%;
+    color: gray;
+   
+}
+.productprice{
+    border-radius: 15px;
+    height: fit-content;
+    border: 1px solid rgba(171, 113, 65, 0.2); /* Color with opacity */
+    padding-left: 1vw;
+    padding-right: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensure text is centered */
+    font-size: 0.7vw;
+    color: black;
+   
+    cursor: pointer;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 900;
+}
+.productprice i {
+    display: flex;           /* force icon to behave like flex item */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  
+
+
+
+.ProductMenu {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Optional: smooth scrolling */
+    gap: 1rem; /* spacing between products */
+    padding: 1rem;
+  }
+  
+  .Product {
+    flex: 0 0 calc(100% / 3 - 1rem); /* 3 per view, minus gap */
+    scroll-snap-align: start;
+    
+    border-radius: 12px;
+    padding: 1rem;
+    
+  }
+  .ProductMenu::-webkit-scrollbar {
+    display: none;
+  }
+  .ProductMenu {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none;    /* Firefox */
+  }
+  
+
+
+
+  @media (max-width: 768px) {
+    .ProductMenu {
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .Product {
+      flex: 0 0 100%; /* full width for one item per scroll */
+      scroll-snap-align: start;
+      border-radius: 12px;
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+      
+    }
+  
+    .ProductMenu::-webkit-scrollbar {
+      display: none;
+    }
+    .ProductMenu {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  
+    /* Optional: Center content inside each Product */
+    .Product  .productImage img {
+      width: 60%;
+    }
+  
+    .productImage i {
+      font-size: 5vw;
+      top: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .productname {
+      font-size: 5vw;
+    }
+  
+    .productcategory,
+    .productprice {
+      font-size: 2vw;
+    }
+  
+    .productDescription {
+      font-size: 3vw;
+    }
+
+    .ProductMenuText{
+       
+        font-size: 9vw;
+        margin-bottom: 13vh;
+       
+    }
+
+    .ProductMenu .Product:nth-child(even){
+      transform: scale(1);
+      
+  }
+    
+  }
+  .button-2 {
+    
+    border-radius: 50px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    background-color: black;
+    color: white;
+  }
+  .button-2:hover{
+    background-color: rgb(244, 235, 235);
+    color: black;
+  }
+  .fullwidth{
+    width: 100%;
+    height:fit-content;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2%;
+    margin: 3%;
+    padding:2% ;
+  }
+ 

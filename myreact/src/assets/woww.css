@@ -1,0 +1,288 @@
+
+
+@font-face {
+    font-family: 'SugarBrown';
+    src: url("../assets/fonts/Brown-Sugar/BrownSugar.ttf") type('truetype');
+}
+@font-face {
+    font-family: 'Monkey';
+    src: url("../assets/fonts/monkeg/Monkeg-Regular.ttf") format('truetype');
+}
+
+
+.wow{
+    width: 100%;
+    height: 30vh;
+   align-self: center;
+    margin-top: 20vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  position: relative;
+  
+  
+}
+
+
+.wow::before {
+    content: 'DARE';
+    background-image: url('src/assets/images/2102-removebg-preview (1).png');
+    background-position: left center; /* Adjust the position of the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    
+    background-size: 13vw; /* Ensure image covers the whole pseudo-element */
+    position: absolute; /* Position it absolutely within the parent container */
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+  
+    font-size: 40vw;
+  /*  margin-left: 12vw;*/
+    color: rgba(138, 39, 39, 0.3); /* Color with opacity */
+    pointer-events: none; /* Make sure clicks pass through */
+     opacity: 0.1;
+    z-index: 0;
+    white-space: nowrap;
+    font-weight: 300;
+    font-family: 'SugarBrown', sans-serif;
+    
+    display: flex; /* Enable flex to align content */
+    justify-content: center;
+    align-items: center;
+}
+.space{
+
+    width: 70%;
+    height: fit-content;
+    display: flex;
+
+    flex-direction: column;
+   
+    
+   
+    
+   justify-content: center;
+   align-items: center;
+   
+    gap: 15%;
+   
+    margin-bottom: 12%;
+   
+   
+}
+.TextHero1{
+    font-size: 10vw;
+    color: #AB7141;
+    letter-spacing: 0.2vw;
+    font-family: 'Monkey';
+    
+    width: 100%;
+    height: 10%;
+    white-space: nowrap; /* Prevent text from breaking */
+   
+}
+
+.TextHero2{
+    font-size: 8vw;
+    color: #021B52;
+    margin-left: 14vw;
+    font-family: 'Monkey';
+    position: relative; /* Set position to relative for stacking context */
+    z-index: 1; /* Ensure it is below producthero2 */
+    white-space: nowrap;
+   
+}
+.producthero2{
+    width: 23vw;
+    justify-content: first baseline;
+    height: auto;
+   
+    transform: rotate(24deg);
+    position: absolute; /* Set position to absolute for layering */
+    z-index: -1; /* Ensure it is above TextHero2 */
+    margin-top:15%;
+    margin-right: 8vw;
+    animation: float3 5s ease-in-out infinite;
+   
+   
+}
+.producthero2 img{
+    width: 100%;
+    height: 100%;
+}
+.producthero3{
+    width: 27vw;
+    justify-content: first baseline;
+    height: auto;
+    justify-self: flex-end;
+    margin-left: 10vw;
+    position: absolute; /* Set position to absolute for layering */
+    z-index: 4; /* Ensure it is above TextHero2 */
+    margin-bottom: 10%;
+    transform: rotate(126deg);
+    animation: float2 3s ease-in-out infinite;
+   
+} 
+.producthero4 {
+    width: 23vw;
+    justify-content: first baseline;
+    height: auto;
+    justify-self: flex-end;
+    margin-left: 30vw;
+    position: absolute; /* Set position to absolute for layering */
+    z-index: 3; /* Ensure it is above TextHero2 */
+    margin-top: 14%;
+    transform: rotate(-34deg);
+    animation: float 3s ease-in-out infinite;
+   /* box-shadow: 0px 4px 10px rgba(2, 27, 82, 0.1);*/
+   
+    border-bottom-left-radius: 23px;
+   
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(-34deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-34deg);
+    }
+}
+@keyframes float2 {
+    0%, 100% {
+        transform: translateY(0) rotate(123eg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(123deg);
+    }
+}
+
+@keyframes float3 {
+    0%, 100% {
+        transform: translateY(0) rotate(24eg);
+    }
+    50% {
+        transform: translateY(10px) rotate(24deg);
+    }
+}
+.textleftbottom {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 0.6vw;
+    color: #021B52;
+    font-family: 'Monkey';
+    z-index: 2;
+    white-space: normal; /* Allow text to break into multiple lines */
+    word-break: break-word; /* Break long words if necessary */
+}
+
+@media (max-width: 900px) {
+    .textleftbottom {
+        font-size: 1.3vw;
+        bottom: 15%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .textleftbottom {
+        font-size: 1.3vw; 
+        bottom: 25%;
+        left: 15%;
+    }
+}
+
+.social-iconshero{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: fit-content;
+   
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    position: relative;
+    left: 14%;
+    
+    bottom: 30%;
+}
+.social-iconshero a i{
+    font-size: 1vw;
+    color: #021B52;
+
+}
+.social-iconshero a i:hover{
+    color: #AB7141;
+}
+.mouseicon {
+    position: absolute;
+        top: 100%; /* Adjusted to make it even lower */  left: 50%;
+    transform: translate(-50%, -50%);
+    align-self: center;
+    justify-self: center;
+    border: 1px solid #021B52;
+    border-radius: 24px;
+    
+    width: 2vw;
+    height: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    z-index: 10;
+    margin-top: 9%;
+}
+.mouseicon:hover{
+    border-color: #AB7141;
+}
+.mouseicon  i{
+    font-size: 1vw;
+    color: #021B52;
+    
+}
+/* 🔽 On smaller screens, push it higher up */
+@media (max-width: 768px) {
+    .mouseicon {
+      top: 80%;
+      width: 3vw;
+      height: 5vw;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .mouseicon {
+      top: 80%;
+      width: 3vw;
+      height: 5vw;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .wow {
+        padding-top:25%;
+      height: 70vh; /* Make it taller on smaller screens */
+      justify-content: center;
+      
+      align-items: flex-start;
+    }
+    
+    .social-iconshero {
+        bottom: 90%;
+    }
+    .textleftbottom{
+       font-size: 3vw;
+        top: 64%;
+    }
+  }
+  .usericon{
+   border-radius: 50%;
+   border: 1px solid ;
+    border-color: #AB7141;
+  }
+
+

@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'Classy';
+    src: url("../assets/fonts/classy/ClassFreeTrial.otf") format('opentype');
+    
+    
+}
+:root {
+    --gray-50:  #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+  }
+  
+.ProductMain{
+   
+    
+    height: fit-content;
+    max-height: min-content;
+    
+    font-family: 'Classy',sans-serif;
+    width: 100%;
+   
+    align-self: center;
+   
+   
+}
+.FlexRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ProductButton {
+    width: clamp(100px,12vw,12vw); /* responsive width with sensible limits */
+    border-radius: 50px;
+    text-align: center;
+    padding: clamp(6px, 2vw, 12px);
+    border: 1px solid var(--gray-400);
+    font-size: clamp(12px, 2vw, 16px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(4px, 1vw, 12px);
+    font-family: 'Classy', sans-serif;
+    cursor: pointer;
+  
+   
+  }
+  
+.ProductButton:hover{
+    background-color: rgb(29, 27, 27);
+    color: white;
+}
+.notselected{
+   opacity: 0.5;
+}
+.smallerfont{
+    font-size: clamp(12px, 2px, 2px); /* Corrected syntax using clamp */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   opacity: 0.4;
+  align-self: center;
+ 
+}
+.FlexCol{
+    display: flex;
+    flex-direction: column;
+}
+.Text{
+    width: 100%;
+   
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+    
+}
+.SubTitle{
+    font-size: clamp(1vw,2vw,12vw) !important;
+}
+.BigTitle{
+    font-size: clamp(3vw,4vw,6vw);
+    text-align: center;
+}
+
+
+.circle-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .products{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2%;
+    height: 100vh;
+   
+  }
+  .flexend{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+   
+    height: fit-content;
+    position: relative;
+   
+ 
+
+  }
+  .mainproduct1{
+     width: 430px;
+     height: 490px;
+   background-size:cover;
+   background-position:center;
+   background-repeat: no-repeat;
+   display: flex;
+   justify-content: flex-start;
+  
+   border-radius: 16px;
+   flex-direction: column;
+   justify-content: space-between;
+  }
+.circle {
+    width: 50px;
+    height: 50px; /* Ensure the height matches the width for a perfect circle */
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin-top: 2vh;
+     margin-right: 1vw;
+     cursor: pointer;
+     font-size: clamp(0.3rem, 1vw, 1.5rem);
+
+   
+}
+.circle2{
+    width: 20px;
+    height: 20px; /* Ensure the height matches the width for a perfect circle */
+    border-radius: 50%;
+    background-color: rgb(33, 26, 109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+     cursor: pointer;
+}
+.circle i{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+}
+.buynow{
+    width: 100%;
+    height: fit-content;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin: 2vw;
+    align-items:flex-end ;
+    
+}
+.buynowtext{
+   width: 45%;
+   height: 100%;
+   background-color:rgba(189, 170, 151,0.4);
+   border-radius: 15px;
+   color: white;
+   font-size: clamp(4vw,2vw,2vw);
+}
+.buynowprice{
+   
+   background-color: black;
+   color: white;
+   
+   
+}
+
+
+.mainproduct1 {
+    width: 100%; /* Make width responsive */
+    max-width: 430px; /* Limit the max width */
+    height: auto; /* Let height adjust automatically */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 16px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px; /* Add some padding for internal spacing */
+   
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .mainproduct1, .productinfo {
+      width: 90%; /* Takes up 90% of the container on smaller screens */
+      max-width: 350px; /* Reduces max width */
+      height: auto; /* Adjust height based on content */
+     
+    }
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 480px) {
+    .mainproduct1 {
+      width: 95%; /* Takes up 95% of the container on very small screens */
+      max-width: 300px; /* Reduces further for mobile devices */
+      padding: 12px; /* Adjust padding for mobile */
+      
+    }
+ 
+  }
+  
+
+
+
+
+  @media (max-width: 480px) {
+    .buynow {
+      flex-direction: column;
+      align-items: center;
+      margin: 4vw;
+    }
+  
+    .buynowtext,
+    .buynowprice {
+      width: 80%;
+    }
+  
+    .circle {
+      width: 20px;
+      height: 20px;
+      margin-right: 0;
+    }
+  
+    
+  }
+  
+  /* 📱📱 Tablet Screens */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .buynow {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 3vw;
+    }
+  
+    .buynowtext {
+      width: 50%;
+    }
+  
+    .buynowprice {
+      width: 25%;
+    }
+  
+    .circle {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .productinfo {
+    width: 100%;
+    
+    height:fit-content;
+    background-color: whitesmoke;
+    backdrop-filter: blur(10px); /* Add blur effect for overlay */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: clamp(1vw, 2vw, 1.4vw);
+    align-items: center;
+    padding: 2vw;
+   
+   
+   
+  }
+  .productinfo:hover{
+    height:15vh ;
+    z-index: 1;
+    overlay: 0.23;
+  }
+  .secondary{
+   color: var(--gray-400);
+    font-size: smaller;
+  }
+
+
+
+
+  .productinfo:hover {
+    z-index: 10; /* raise above sibling elements */
+    transform: scale(1.03); /* optional: a slight pop effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* optional: adds depth */
+    transition: all 1.3s ease-in-out;
+    height: 13%;
+    align-self:flex-start;
+     
+    
+  }
+  .mainbig{
+    overflow: visible; /* 👈 allow children to overflow */
+  }
+  .circle:hover{
+   transform: scale(1.2);
+    transition: all 1s ease-in-out;
+  }
+ 

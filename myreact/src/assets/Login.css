@@ -1,0 +1,31 @@
+
+@font-face {
+    font-family: 'SugarBrown';
+    src: url("../assets/fonts/Brown-Sugar/BrownSugar.ttf") type('truetype');
+}
+@font-face {
+    font-family: 'Monkey';
+    src: url("../assets/fonts/monkeg/Monkeg-Regular.ttf") format('truetype');
+}
+
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.wantedtext{
+    font-family: 'Habora',sans-serif !important;
+    color: #AB7141;
+    white-space: nowrap;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none !important;            /* Removes browser default outline */
+    box-shadow: none !important;         /* Removes the glow/light */
+          /* Optional: remove border if needed */
+  }
+  
